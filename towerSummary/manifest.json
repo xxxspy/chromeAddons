@@ -1,0 +1,32 @@
+{
+    "background":
+    {
+        "page": "background.js",
+        "persistent": false
+    },
+    "content_scripts": [
+    {
+        "matches": ["https://tower.im/projects/*"],
+        "js": ["jquery-3.2.1.min.js", "fetch.js"],
+        "run_at": "document_end"
+    }],
+    "description": "Summary of Tower list of Last week",
+    "icons":
+    {
+        "16": "ico.jpg"
+    },
+    "manifest_version": 2,
+    "author": "xxxspy",
+    "name": "Tower work summary",
+    "homepage_url": "http://mlln.cn/",
+    "permissions": ["tabs", "storage", "unlimitedStorage", "downloads", "declarativeContent", "activeTab", "management", "bookmarks", "<all_urls>"],
+    "browser_action":
+    {
+        "default_popup": "data/popup.html",
+        "default_title": "Tower Summary"
+    },
+    "short_name": "TS",
+    "version": "0.0.1",
+    "web_accessible_resources": ["*"],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com/ https://apis.google.com; object-src 'self'"
+}

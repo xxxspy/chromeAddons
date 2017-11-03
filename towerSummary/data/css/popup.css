@@ -1,0 +1,96 @@
+html
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: -webkit-radial-gradient( top center, circle cover, #4B4B4A 100%, #4DAF7C );
+}
+.content
+{
+	position: relative;
+	top: 0px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Bar */
+
+.mainBar
+{
+    background-color: #4B4B4A;
+    color: #FFFFFF;
+	color: rgba( 255, 255, 255, 0.8 );
+	width: 250px;
+	height: 50px;
+	font-family: "Lato", "FontAwesome", Helvetica;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.option, .Down, .cog
+{
+	float: left;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+
+.option { width: 94px; }
+.Down { width: 115px; }
+.cog { width: 35px; }
+
+.option, .Down { border-right: 1px solid #3E3E3D; }
+
+.option:before { content: "\f013"; margin-right: 5px; font-size: 13px; position: relative; bottom: 1px; color: #FFFFFF; }
+.Down:before { content: "\f019"; margin-right: 7px; font-size: 14px; color: #FFFFFF; }
+.cog:after { content: "\f0d7"; margin-left: 12px; font-size: 12px; color: #FFFFFF; }
+
+.option:hover, .Down:hover, .cog:hover { background: #807F7D; color: #E7E7E8; cursor: pointer; }
+
+input#toggle { display: none; }
+input#toggle ~ .menu { display: block; }
+input#toggle:checked ~ .menu { display: none; }
+
+/* Menu */
+
+.menu
+{
+	margin-top: 0px;
+	background-color: #D41E15;
+    color: #FFFFFF;
+	color: rgba( 255, 255, 255, 0.8 );
+	width: 250px;
+	height: 165px;
+	font-family: "Lato", "FontAwesome", Helvetica;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.menu a
+{
+  display: block;
+  padding: 0 0 0 30px;
+  line-height: 38px;
+  color: #FFFFFF;
+  color: rgba( 255, 255, 255, 0.8 );
+  text-decoration: none;
+}
+
+.menu a:after
+{
+	opacity: 0;
+	content: "\f0da";
+	position: absolute;
+	right: 0;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.menu a:hover:after { opacity: 1; }
+
+.menu a:hover
+{
+	background: #7EC29C;
+	color: #FFFFFF;
+	cursor: pointer;
+}
