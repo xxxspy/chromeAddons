@@ -1,0 +1,2 @@
+# contents模块
+该模块主要存放injected scripts， 因为chrome extension的background scripts与injected scripts运行在不同的页面，没有共享变量，必须通过message通讯。下面分别介绍各个js的功能。
